@@ -17,3 +17,26 @@ Go to the [project board](#coming-soon), select a ticket to work on, then create
 Your PR will be reviewed and either approved and merged or commented on.
 
 Once your PR is merged, you will be added as a contributor to the project.
+
+## Run NextJS project locally
+Clone the project to your machine
+
+First, do the installations, then run the development server:
+
+```bash
+npm i
+npm run prepare
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Run Storybook project locally
+
+Start the storybook server
+
+```bash
+npm run storybook
+```
+
+Open [port 6006](http://localhost:6006/)
