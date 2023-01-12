@@ -1,3 +1,5 @@
+import Card from '../components/Card';
+
 const techies = [
   {
     id: 1,
@@ -11,6 +13,8 @@ const techies = [
     portfolioUrl: 'https://rochellerossman.dev',
     resumeUrl:
       'https://docs.google.com/document/d/1h1L2PI_raWf3lXm0VepStg76ioLKc8jqX9dzmxbLjfM/edit',
+    jobType: 'Software Engineer',
+    experienceLevel: 'Junior',
   },
   {
     id: 2,
@@ -18,10 +22,8 @@ const techies = [
     lastName: 'Van der Brug',
     imageUrl: 'http://dummyimage.com/176x100.png/cc0000/ffffff',
     title: 'Sales Representative',
-    linkedInUrl: 'http://nymag.com',
-    githubUrl: 'http://123-reg.co.uk',
-    portfolioUrl: 'https://si.edu',
-    resumeUrl: 'https://auda.org.au',
+    jobType: 'Developer',
+    experienceLevel: 'Senior',
   },
   {
     id: 3,
@@ -30,9 +32,8 @@ const techies = [
     imageUrl: 'http://dummyimage.com/250x100.png/dddddd/000000',
     title: 'Environmental Specialist',
     linkedInUrl: 'https://google.es',
-    githubUrl: 'http://smh.com.au',
-    portfolioUrl: 'http://ucla.edu',
-    resumeUrl: 'http://uol.com.br',
+    jobType: 'Developer',
+    experienceLevel: 'Mid-level',
   },
   {
     id: 4,
@@ -42,8 +43,8 @@ const techies = [
     title: 'Programmer IV',
     linkedInUrl: 'https://nydailynews.com',
     githubUrl: 'http://ed.gov',
-    portfolioUrl: 'https://mayoclinic.com',
-    resumeUrl: 'https://sciencedaily.com',
+    jobType: 'Developer',
+    experienceLevel: 'Mid-level',
   },
   {
     id: 5,
@@ -55,11 +56,17 @@ const techies = [
     githubUrl: 'https://craigslist.org',
     portfolioUrl: 'http://altervista.org',
     resumeUrl: 'http://discuz.net',
+    jobType: 'Analyst',
+    experienceLevel: 'Senior',
   },
 ];
 
 export default function Home() {
   return (
-    <p>{techies}</p>
+    <>
+      {techies.map((techie) => (
+        <Card userObj={techie} />
+      ))}
+    </>
   );
 }
