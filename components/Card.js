@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function TechieCard({ userObj }) {
   return (
-    <Card key={userObj.id} className="card" style={{ width: '18rem' }}>
+    <Card className="card" style={{ width: '18rem' }}>
       <Card.Img src={userObj.imageUrl} className="card-img-top" alt="..." />
       <Card.Body>
         <Card.Title className="card-title">
@@ -19,7 +19,7 @@ export default function TechieCard({ userObj }) {
           {userObj.experienceLevel}
         </Card.Text>
         <Card.Footer>
-          {userObj.linkedInUrl !== undefined ? (
+          {userObj.linkedInUrl ? (
             <Link href={userObj.linkedInUrl} passHref>
               <a target="_blank" href={userObj.linkedInUrl} rel="noreferrer">
                 <button type="button" className="btn btn-primary">
@@ -30,7 +30,7 @@ export default function TechieCard({ userObj }) {
           ) : (
             ''
           )}
-          {userObj.githubUrl !== undefined ? (
+          {userObj.githubUrl ? (
             <Link href={userObj.githubUrl} passHref>
               <a target="_blank" href={userObj.githubUrl} rel="noreferrer">
                 <button type="button" className="btn btn-primary">
@@ -41,7 +41,7 @@ export default function TechieCard({ userObj }) {
           ) : (
             ''
           )}
-          {userObj.portfolioUrl !== undefined ? (
+          {userObj.portfolioUrl ? (
             <Link href={userObj.portfolioUrl} passHref>
               <a target="_blank" href={userObj.portfolioUrl} rel="noreferrer">
                 <button type="button" className="btn btn-primary">
@@ -52,7 +52,7 @@ export default function TechieCard({ userObj }) {
           ) : (
             ''
           )}
-          {userObj.resumeUrl !== undefined ? (
+          {userObj.resumeUrl ? (
             <Link href={userObj.resumeUrl} passHref>
               <a target="_blank" href={userObj.resumeUrl} rel="noreferrer">
                 <button type="button" className="btn btn-primary">

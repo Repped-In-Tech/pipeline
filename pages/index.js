@@ -20,7 +20,7 @@ const techies = [
     id: 2,
     firstName: 'Ewell',
     lastName: 'Van der Brug',
-    imageUrl: 'http://dummyimage.com/176x100.png/cc0000/ffffff',
+    imageUrl: 'https://dummyimage.com/176x100.png/cc0000/ffffff',
     title: 'Sales Representative',
     jobType: 'Developer',
     experienceLevel: 'Senior',
@@ -29,7 +29,7 @@ const techies = [
     id: 3,
     firstName: 'Chelsy',
     lastName: 'Krale',
-    imageUrl: 'http://dummyimage.com/250x100.png/dddddd/000000',
+    imageUrl: 'https://dummyimage.com/250x100.png/dddddd/000000',
     title: 'Environmental Specialist',
     linkedInUrl: 'https://google.es',
     jobType: 'Developer',
@@ -39,10 +39,10 @@ const techies = [
     id: 4,
     firstName: 'Byran',
     lastName: 'Brazur',
-    imageUrl: 'http://dummyimage.com/229x100.png/ff4444/ffffff',
+    imageUrl: 'https://dummyimage.com/229x100.png/ff4444/ffffff',
     title: 'Programmer IV',
     linkedInUrl: 'https://nydailynews.com',
-    githubUrl: 'http://ed.gov',
+    githubUrl: 'https://ed.gov',
     jobType: 'Developer',
     experienceLevel: 'Mid-level',
   },
@@ -50,12 +50,12 @@ const techies = [
     id: 5,
     firstName: 'Merrile',
     lastName: 'Howgill',
-    imageUrl: 'http://dummyimage.com/111x100.png/5fa2dd/ffffff',
+    imageUrl: 'https://dummyimage.com/111x100.png/5fa2dd/ffffff',
     title: 'Community Outreach Specialist',
-    linkedInUrl: 'http://springer.com',
+    linkedInUrl: 'https://springer.com',
     githubUrl: 'https://craigslist.org',
-    portfolioUrl: 'http://altervista.org',
-    resumeUrl: 'http://discuz.net',
+    portfolioUrl: 'https://altervista.org',
+    resumeUrl: 'https://discuz.net',
     jobType: 'Analyst',
     experienceLevel: 'Senior',
   },
@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       {techies.map((techie) => (
-        <Card userObj={techie} />
+        <Card key={techie.id} userObj={techie} />
       ))}
     </>
   );
