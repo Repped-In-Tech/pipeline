@@ -64,9 +64,11 @@ const techies = [
 export default function Home() {
   return (
     <>
-      {techies.map((techie) => (
-        <Card key={techie.id} userObj={techie} />
-      ))}
+      <div className="home">
+        {techies.map((techie) => (
+          <Card key={techie.id} userObj={techie} />
+        ))}
+      </div>
     </>
   );
 }
