@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin, BsGlobe2 } from 'react-icons/bs';
 import { GrDocumentText } from 'react-icons/gr';
@@ -32,59 +31,38 @@ export default function TechieCard({ userObj }) {
         </Card.Text>
         <Card.Footer>
           {userObj.linkedInUrl ? (
-            <Link href={userObj.linkedInUrl} passHref>
-              <OverlayTrigger
-                placement="bottom"
-                overlay={
-                  <Tooltip id="tooltip-linkedin">LinkedIn Profile</Tooltip>
-                }
-              >
-                <a target="_blank" href={userObj.linkedInUrl} rel="noreferrer">
-                  <BsLinkedin className="icon" />
-                </a>
-              </OverlayTrigger>
+            <Link href={userObj.linkedInUrl}>
+              <a target="_blank" href={userObj.linkedInUrl} rel="noreferrer">
+                <BsLinkedin className="icon" />
+              </a>
             </Link>
+
           ) : (
             ''
           )}
           {userObj.githubUrl ? (
-            <Link href={userObj.githubUrl} passHref>
-              <OverlayTrigger
-                placement="bottom"
-                overlay={<Tooltip id="tooltip-github">Github Profile</Tooltip>}
-              >
-                <a target="_blank" href={userObj.githubUrl} rel="noreferrer">
-                  <BsGithub className="icon" />
-                </a>
-              </OverlayTrigger>
+            <Link href={userObj.githubUrl}>
+              <a target="_blank" href={userObj.githubUrl} rel="noreferrer">
+                <BsGithub className="icon" />
+              </a>
             </Link>
           ) : (
             ''
           )}
           {userObj.portfolioUrl ? (
-            <Link href={userObj.portfolioUrl} passHref>
-              <OverlayTrigger
-                placement="bottom"
-                overlay={<Tooltip id="tooltip-portfolio">Portfolio Website</Tooltip>}
-              >
-                <a target="_blank" href={userObj.portfolioUrl} rel="noreferrer">
-                  <BsGlobe2 className="icon" />
-                </a>
-              </OverlayTrigger>
+            <Link href={userObj.portfolioUrl}>
+              <a target="_blank" href={userObj.portfolioUrl} rel="noreferrer">
+                <BsGlobe2 className="icon" />
+              </a>
             </Link>
           ) : (
             ''
           )}
           {userObj.resumeUrl ? (
-            <Link href={userObj.resumeUrl} passHref>
-              <OverlayTrigger
-                placement="bottom"
-                overlay={<Tooltip id="tooltip-resume">Resume</Tooltip>}
-              >
-                <a target="_blank" href={userObj.resumeUrl} rel="noreferrer">
-                  <GrDocumentText className="icon" />
-                </a>
-              </OverlayTrigger>
+            <Link href={userObj.resumeUrl}>
+              <a target="_blank" href={userObj.resumeUrl} rel="noreferrer">
+                <GrDocumentText className="icon" />
+              </a>
             </Link>
           ) : (
             ''
