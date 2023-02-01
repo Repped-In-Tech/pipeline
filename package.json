@@ -1,7 +1,7 @@
 {
-  "name": "next-supabase-starter",
+  "name": "pipeline",
   "private": true,
-  "author": "Dr. Teresa Vasquez",
+  "author": "Repped In Tech",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
