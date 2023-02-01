@@ -16,3 +16,63 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.home {
+  margin: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  grid-column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.form {
+    grid-row-end: -1;
+    justify-self: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text-title {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-text-jobType {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-text-experienceLevel {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
