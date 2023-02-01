@@ -6,68 +6,65 @@ import { BsGithub, BsLinkedin, BsGlobe2 } from 'react-icons/bs';
 import { GrDocumentText } from 'react-icons/gr';
 
 export default function TechieCard({ userObj }) {
+  const {
+    linkedInUrl, githubUrl, portfolioUrl, resumeUrl, title, jobType, experienceLevel, lastName, firstName, imageUrl,
+  } = userObj;
+  const hasLinks = linkedInUrl || githubUrl || portfolioUrl || resumeUrl;
+
   return (
     <Card className="card" style={{ width: '18rem' }}>
-      <Card.Img
-        src={userObj.imageUrl}
-        className="card-img-top"
-        height="200px"
-        style={{ objectFit: 'cover' }}
-        alt="..."
-      />
+      <Card.Img src={imageUrl} className="card-img-top" height="200px" style={{ objectFit: 'cover' }} alt={`${firstName} ${lastName}`} />
       <Card.Body>
         <Card.Title className="card-title">
-          {userObj.firstName} {userObj.lastName}
+          {firstName} {lastName}
         </Card.Title>
         <Card.Text className="card-text">
-          <span className="card-text-title">Title:</span> {userObj.title}
+          <span className="card-text-title">Title:</span> {title}
           <br />
-          <span className="card-text-jobType">Job Type:</span> {userObj.jobType}
+          <span className="card-text-jobType">Job Type:</span> {jobType}
           <br />
-          <span className="card-text-experienceLevel">
-            Experience Level:
-          </span>{' '}
-          {userObj.experienceLevel}
+          <span className="card-text-experienceLevel">Experience Level:</span> {experienceLevel}
         </Card.Text>
-        <Card.Footer>
-          {userObj.linkedInUrl ? (
-            <Link href={userObj.linkedInUrl}>
-              <a target="_blank" href={userObj.linkedInUrl} rel="noreferrer">
-                <BsLinkedin className="icon" />
-              </a>
-            </Link>
-
-          ) : (
-            ''
-          )}
-          {userObj.githubUrl ? (
-            <Link href={userObj.githubUrl}>
-              <a target="_blank" href={userObj.githubUrl} rel="noreferrer">
-                <BsGithub className="icon" />
-              </a>
-            </Link>
-          ) : (
-            ''
-          )}
-          {userObj.portfolioUrl ? (
-            <Link href={userObj.portfolioUrl}>
-              <a target="_blank" href={userObj.portfolioUrl} rel="noreferrer">
-                <BsGlobe2 className="icon" />
-              </a>
-            </Link>
-          ) : (
-            ''
-          )}
-          {userObj.resumeUrl ? (
-            <Link href={userObj.resumeUrl}>
-              <a target="_blank" href={userObj.resumeUrl} rel="noreferrer">
-                <GrDocumentText className="icon" />
-              </a>
-            </Link>
-          ) : (
-            ''
-          )}
-        </Card.Footer>
+        {hasLinks && (
+          <Card.Footer>
+            {linkedInUrl ? (
+              <Link href={linkedInUrl}>
+                <a target="_blank" href={linkedInUrl} rel="noreferrer">
+                  <BsLinkedin className="icon" />
+                </a>
+              </Link>
+            ) : (
+              ''
+            )}
+            {githubUrl ? (
+              <Link href={githubUrl}>
+                <a target="_blank" href={githubUrl} rel="noreferrer">
+                  <BsGithub className="icon" />
+                </a>
+              </Link>
+            ) : (
+              ''
+            )}
+            {portfolioUrl ? (
+              <Link href={portfolioUrl}>
+                <a target="_blank" href={portfolioUrl} rel="noreferrer">
+                  <BsGlobe2 className="icon" />
+                </a>
+              </Link>
+            ) : (
+              ''
+            )}
+            {resumeUrl ? (
+              <Link href={resumeUrl}>
+                <a target="_blank" href={resumeUrl} rel="noreferrer">
+                  <GrDocumentText className="icon" />
+                </a>
+              </Link>
+            ) : (
+              ''
+            )}
+          </Card.Footer>
+        )}
       </Card.Body>
     </Card>
   );
