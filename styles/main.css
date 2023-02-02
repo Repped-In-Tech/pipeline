@@ -1,8 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.css';
-@import 'colors';
-@import 'fonts';
-@import 'globals';
-
+@import 'globals/colors';
+@import 'globals/fonts';
+@import 'globals/fontStyles';
+@import 'globals/resets';
 
 /* COMPONENTS  */
 @import 'components/techieCard';
