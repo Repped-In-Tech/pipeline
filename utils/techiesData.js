@@ -21,6 +21,7 @@ const techies = [
     lastName: 'Van der Brug',
     imageUrl: 'https://dummyimage.com/176x100.png/cc0000/ffffff',
     title: 'Sales Representative',
+    githubUrl: 'https://github.com/rochelle-rossman',
     jobType: 'Developer',
     experienceLevel: 'Senior',
     openForWork: false,
