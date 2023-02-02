@@ -1,0 +1,10 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'globals';
+
+
+/* COMPONENTS  */
+@import 'components/techieCard';
+
+/* PAGES */
+@import 'pages/index';
+@import 'pages/profile';

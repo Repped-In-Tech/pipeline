@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { SSRProvider } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
-import '../styles/globals.css';
+import '../styles/main.css';
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -1,0 +1,40 @@
+
+.card-body {
+  padding: 0;
+}
+
+.card-content {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text-title {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-text-jobType {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-text-experienceLevel {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.card-icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
