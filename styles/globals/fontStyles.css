@@ -1,0 +1,9 @@
+body {
+  font-family: 'SpaceGrotesk';
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'SpaceGrotesk';
+  font-weight: 700;
+}

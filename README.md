@@ -39,3 +39,16 @@ npm run storybook
 ```
 
 Open [port 6006](http://localhost:6006/)
+
+## Add Subdomain Netlify + Bluehost
+- On netlify navigate to Team > Domains > Add or Register a domain
+- Enter the subdomain in full (i.e. pipeline.reppedintech.com)
+- Create nettlify app
+- Create 2 new CNAME records
+  - Host record: subdomain (i.e. pipeline + www.pipeline)
+  - Points to: use assigned Netlify url
+  - TTL - leave blank
+
+Docs:
+- https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain
+- https://docs.netlify.com/domains-https/netlify-dns/delegate-a-subdomain-to-netlify-dns/

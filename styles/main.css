@@ -1,0 +1,12 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'globals/colors';
+@import 'globals/fonts';
+@import 'globals/fontStyles';
+@import 'globals/resets';
+
+/* COMPONENTS  */
+@import 'components/techieCard';
+
+/* PAGES */
+@import 'pages/index';
+@import 'pages/profile';
