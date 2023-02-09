@@ -5,70 +5,67 @@ import { BsGithub, BsLinkedin, BsGlobe2 } from 'react-icons/bs';
 import { GrDocumentText } from 'react-icons/gr';
 
 export default function TechieCard({ userObj }) {
+  // console.log(userObj);
   const {
-    linkedInUrl, githubUrl, portfolioUrl, resumeUrl, imageUrl, lastName, firstName, title, jobType, experienceLevel,  
+    linkedInUrl, githubUrl, portfolioUrl, resumeUrl, imageUrl, lastName, firstName, title, jobType, experienceLevel,
   } = userObj;
   const hasLinks = linkedInUrl || githubUrl || portfolioUrl || resumeUrl;
 
   return (
     <>
-    <TechieCard className='bg-green-50'>
-      <TechieCard.Img src={imageUrl} className="" height="200px" style={{ objectFit: 'cover' }} alt={`${firstName} ${lastName}`} />
-      <TechieCard.Body>
-        <div>
-          <TechieCard.Title className="card-title">
-            {firstName} {lastName}
-          </TechieCard.Title>
-          <TechieCard.Text className="card-text">
-            <span className="card-text-title">Title:</span> {title}
-            <br />
-            <span className="card-text-jobType">Job Type:</span> {jobType}
-            <br />
-            <span className="card-text-experienceLevel">Experience Level:</span> {experienceLevel}
-          </TechieCard.Text>
-        </div>
+      <li key={firstName} className="rounded-2xl bg-gray-800 py-10 px-8">
+        <img className="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56" src={imageUrl} alt="" />
+        <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{firstName} {lastName}</h3>
+        <p className="text-sm leading-6 text-gray-400">{title} {jobType} {experienceLevel}</p>
         {hasLinks && (
-          <TechieCard.Footer>
+          <ul className="mt-6 flex justify-center gap-x-6">
             {linkedInUrl ? (
-              <Link href={linkedInUrl}>
-                <a target="_blank" href={linkedInUrl} rel="noreferrer">
-                  <BsLinkedin className="card-icon" />
-                </a>
-              </Link>
+              <li>
+                <Link href={linkedInUrl}>
+                  <a target="_blank" href={linkedInUrl} rel="noreferrer">
+                    <BsLinkedin className="card-icon" />
+                  </a>
+                </Link>
+              </li>
             ) : (
               ''
             )}
             {githubUrl ? (
-              <Link href={githubUrl}>
-                <a target="_blank" href={githubUrl} rel="noreferrer">
-                  <BsGithub className="card-icon" />
-                </a>
-              </Link>
+              <li>
+                <Link href={githubUrl}>
+                  <a target="_blank" href={githubUrl} rel="noreferrer">
+                    <BsGithub className="card-icon" />
+                  </a>
+                </Link>
+              </li>
             ) : (
               ''
             )}
             {portfolioUrl ? (
-              <Link href={portfolioUrl}>
-                <a target="_blank" href={portfolioUrl} rel="noreferrer">
-                  <BsGlobe2 className="card-icon" />
-                </a>
-              </Link>
+              <li>
+                <Link href={portfolioUrl}>
+                  <a target="_blank" href={portfolioUrl} rel="noreferrer">
+                    <BsGlobe2 className="card-icon" />
+                  </a>
+                </Link>
+              </li>
             ) : (
               ''
             )}
             {resumeUrl ? (
-              <Link href={resumeUrl}>
-                <a target="_blank" href={resumeUrl} rel="noreferrer">
-                  <GrDocumentText className="card-icon" />
-                </a>
-              </Link>
+              <li>
+                <Link href={resumeUrl}>
+                  <a target="_blank" href={resumeUrl} rel="noreferrer">
+                    <GrDocumentText className="card-icon" />
+                  </a>
+                </Link>
+              </li>
             ) : (
               ''
             )}
-          </TechieCard.Footer>
+          </ul>
         )}
-      </TechieCard.Body>
-    </TechieCard>
+      </li>
     </>
   );
 }
