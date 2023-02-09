@@ -13,7 +13,7 @@ export default function TechieCard({ userObj }) {
 
   return (
     <>
-      <li key={firstName} className="rounded-2xl bg-gray-800 py-10 px-8">
+      <li className="rounded-2xl bg-gray-800 py-10 px-8">
         <img className="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56" src={imageUrl} alt="" />
         <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{firstName} {lastName}</h3>
         <p className="text-sm leading-6 text-gray-400">{title} {jobType} {experienceLevel}</p>
