@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
 // import { SSRProvider } from 'react-bootstrap';
 import Footer from '../components/Footer';
