@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { PlusIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -13,10 +13,8 @@ const user = {
   imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 const navigation = [
-  { name: 'Dashboard', href: '/some', current: true },
-  { name: 'Team', href: '/other', current: false },
-  { name: 'Projects', href: '/then', current: false },
-  { name: 'Calendar', href: '/that', current: false },
+  { name: 'Link One', href: '/some', current: true },
+  { name: 'Link Two', href: '/other', current: false },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -33,12 +31,12 @@ export default function Navbar() {
 
   console.log(router);
   return (
-    <Disclosure as="nav" className="bg-gray-800 sticky top-0 z-50">
+    <Disclosure as="nav" className="bg-neutral-800 sticky top-0 z-50">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
-              <div className="flex">
+              <div className="flex items-center">
                 <div className="-ml-2 mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -50,25 +48,14 @@ export default function Navbar() {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                </div>
+                <div className="text-2xl font-medium text-gray-400 mr-3">PIPELINE</div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4 cursor-pointer">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <div
                         className={classNames(
-                          item.href === router.asPath ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium',
+                          item.href === router.asPath ? 'bg-neutral-900 text-white' : 'text-neutral-300 hover:bg-neutral-800 hover:text-green-500',
+                          'px-3 py-2 rounded-md text-lg font-medium',
                         )}
                         aria-current={item.href === router.asPath ? 'page' : undefined}
                       >
@@ -82,20 +69,20 @@ export default function Navbar() {
                 <div className="flex-shrink-0">
                   <button
                     type="button"
-                    className="relative inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="relative inline-flex items-center rounded-full border border-transparent bg-neutral-400 px-4 py-2 text-sm font-medium text-black shadow-sm hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                     <span>New Job</span>
                   </button>
                 </div>
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
-                  <button
+                  {/* <button
                     type="button"
                     className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
+                  </button> */}
 
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
@@ -165,13 +152,13 @@ export default function Navbar() {
                   <div className="text-base font-medium text-white">{user.name}</div>
                   <div className="text-sm font-medium text-gray-400">{user.email}</div>
                 </div>
-                <button
+                {/* <button
                   type="button"
                   className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
               </div>
               <div className="mt-3 space-y-1 px-2 sm:px-3">
                 {userNavigation.map((item) => (
