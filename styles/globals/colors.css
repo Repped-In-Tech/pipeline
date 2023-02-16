@@ -1,4 +1,4 @@
 :root {
-  --main-bg-color: #DBDBDB;
-  --accent-1: #A300BF;
+  --gray-900: #171717; 
+  /* To-do: add this variable via a utility class*/
 }

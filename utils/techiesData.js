@@ -20,6 +20,7 @@ const techies = [
     firstName: 'Ewell',
     lastName: 'Van der Brug',
     imageUrl: 'https://dummyimage.com/176x100.png/cc0000/ffffff',
+    linkedInUrl: 'https://www.linkedin.com/in/rochelle-rossman/',
     title: 'Sales Representative',
     githubUrl: 'https://github.com/rochelle-rossman',
     jobType: 'Developer',
