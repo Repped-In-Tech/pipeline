@@ -13,7 +13,9 @@ function MyApp({ Component, pageProps }) {
         <title>Pipeline | Repped In Tech</title>
       </Head>
       <NavBar />
-      <Component {...pageProps} />
+      <div className="mt-4 md:mt-8 mx-auto container">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
     // </SSRProvider>
