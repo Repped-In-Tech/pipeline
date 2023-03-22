@@ -131,7 +131,11 @@ export default function Navbar() {
                             </Menu.Item>
                           ))}
                           <Menu.Item key="sign-out">
-                            <button type="button" onClick={signOutUser}>
+                            <button
+                              type="button"
+                              className="block px-4 py-2 text-sm text-gray-700"
+                              onClick={signOutUser}
+                            >
                               Sign Out
                             </button>
                           </Menu.Item>
@@ -144,10 +148,10 @@ export default function Navbar() {
                 <button
                   type="button"
                   size="lg"
-                  className="copy-btn"
+                  className="copy-btn text-gray-400"
                   onClick={signInUser}
                 >
-                  Sign In
+                  Member Sign In
                 </button>
               )}
             </div>
