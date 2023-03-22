@@ -18,11 +18,13 @@ export default function TechieCard({ userObj }) {
     <>
       <li className="group block cursor-pointer rounded-md bg-neutral-800 hover:bg-neutral-00 transition-colors ease-in-out duration-700">
         <div className="bg-cover bg-center aspect-[4/3] rounded-t border-b-2 border-neutral-600 group-hover:border-green-600 transition-colors" style={profileImg} />
-        <div className="p-3">
-          <h3 className="text-lg mt-1 font-semibold tracking-tight text-neutral-200 group-hover:text-green-600 transition-colors">{firstName} {lastName}</h3>
-          <p className="text-sm leading-tight text-neutral-400">{experienceLevel} {title}</p>
-          {/* <p className="text-xs uppercase text-neutral-300">{experienceLevel}</p> */}
-        </div>
+        <Link href={`techies/${lastName}`} passHref>
+          <div className="p-3">
+            <h3 className="text-lg mt-1 font-semibold tracking-tight text-neutral-200 group-hover:text-green-600 transition-colors">{firstName} {lastName}</h3>
+            <p className="text-sm leading-tight text-neutral-400">{experienceLevel} {title}</p>
+            {/* <p className="text-xs uppercase text-neutral-300">{experienceLevel}</p> */}
+          </div>
+        </Link>
         {hasLinks && (
           <ul className="mt-2 flex justify-left gap-x-2 p-3">
             {linkedInUrl ? (
