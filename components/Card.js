@@ -6,7 +6,6 @@ import {
 } from 'react-icons/bs';
 
 export default function TechieCard({ userObj }) {
-  // console.log(userObj);
   const {
     linkedInUrl, githubUrl, portfolioUrl, resumeUrl, imageUrl, lastName, firstName, title, experienceLevel,
   } = userObj;

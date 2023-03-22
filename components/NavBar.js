@@ -29,7 +29,6 @@ function classNames(...classes) {
 export default function Navbar() {
   const router = useRouter();
 
-  console.log(router);
   return (
     <Disclosure as="nav" className="bg-neutral-800 sticky top-0 z-50">
       {({ open }) => (
