@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import Head from 'next/head';
-// import { SSRProvider } from 'react-bootstrap';
+import { AuthProvider } from '../utils/context/authContext';
+// import ViewDirectorBasedOnUserAuthStatus from '../utils/ViewDirector';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import '../styles/main.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    // <SSRProvider>
-    <>
+    <AuthProvider>
       <Head>
         <title>Pipeline | Repped In Tech</title>
       </Head>
@@ -17,8 +17,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       <Footer />
-    </>
-    // </SSRProvider>
+    </AuthProvider>
   );
 }
 
